@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Djae.exe</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="css/gallery-grid.css">
+    <style type="text/css">
+	
+	.tz-gallery{
+	 background-color: white !important;
+	 margin-top: -60px;
+	}
+	.rotate{
+	transform: rotate(90deg);
+	}
+	
+
+	</style>
+
+</head>
+<body>
+
+<div >
+
+    <div class="tz-gallery">
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="img/IMG_1275.jpg">
+                    <img src="img/IMG_1275.jpg" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="img/2_raq.jpg">
+                    <img src="img/2_raq.jpg" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="img/berhe.jpg">
+                    <img src="img/berhe.jpg" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+               <video controls="controls" width="400" height="330" name="Video Name" src="img/IMG_1468.mov"></video>
+            </div>
+            <div class="col-sm-12 col-md-4">
+               <video controls="controls" width="400" height="330" name="Video Name" src="img/IMG_1474.mov"></video>
+            </div> 
+            <div class="col-sm-12 col-md-4">
+               <video controls="controls" width="400" height="330" name="Video Name" src="img/noob.mp4"></video>
+            </div> 			
+			
+            
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+</body>
+</html>
