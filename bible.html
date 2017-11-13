@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.2/umd/popper.min.js" ></script>
 
     <title>Djae.exe</title>
     <style type="text/css">
@@ -34,16 +35,23 @@
           font-family: 'Poppins', sans-serif;
       }
       h3{ 
-           width: 160px;
+           margin-right: 50%;
            border-radius: 10px;
            color: white;
            padding-bottom: 5px;
            padding-left: 10px;
+          
+
            
             background: -webkit-linear-gradient(right, #6A9113, #141517) !important; /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right,#6A9113, #141517)!important; /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right,#6A9113, #141517)!important; /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right,#6A9113, #141517)!important; /* Standard syntax */
+      
+      }
+      h3:hover{
+        
+         opacity: 0.6;
       }
       .desc {
     
@@ -88,6 +96,14 @@ background-size: 100% 1.2em;
          background-color: grey;
          opacity: 0.6;
       }
+      h4{
+        padding-bottom: 10px;
+        color: red;
+      }
+      h5 {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
      
      
      
@@ -98,8 +114,7 @@ background-size: 100% 1.2em;
      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">DJ</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="True" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -120,6 +135,7 @@ background-size: 100% 1.2em;
         </div>
       </div>
     </nav>
+    
 
      <header class="masthead">
       <div class="container">
@@ -140,66 +156,19 @@ background-size: 100% 1.2em;
       <div class="row">
         <div class="col-lg-8 col-sm-10 mx-auto">
           
-          <p> </p>
+          <p style="text-align:center"> Click on topics you want to learn </p>
           <div class="row">
-            <div style="height: 500px">
-                <h3>Javascript </h3>
-                 <h4 style="font-size: 20px"><u> Different functions in JS </u> </h4>
-                 <div class="desc">
-                 
-                    
-                      <div id="highlight" >  </div>
-                      <div class="para"  style="color: red">
-                       
-                         <p >function A () {  // function declaration</br> }; </p>
-                       
-                         <p>var B = function(){  // function Expression </br>};     </p> 
-                         <p>var C = (function(){ // function expression with grouping operators</br>});  </p>
-                         <p style="padding-bottom: 190px">var D = function foo(){</br>};   </p>
-
-                         <a href="https://www.davidbcalhoun.com/2011/different-ways-of-defining-functions-in-javascript-this-is-madness/" style="color:blue"> 
-                         Above is just a summary. For more information "click" here </a>
-                   <!--      <p>
-                         var E = (function(){   </br>   return function(){    } </br>  })(); 
-                        </p>
-                         <p> var F = new Function(); </p> 
-                         <p> var G = new function(){</br>};    </p>
-                         <p style="padding-bottom: 200px">var H = x => x * 2; </p> -->
-                      </div>   
-                                        
-                </div>
-                
-                <div class="notes"> 
-                  <div id="one">
-                    <p  style="font-size: 15px; color: grey">
-                                    <u> Hoisting </u> --> Functions are hoisted to the top of the scope so you can call functions before they are written
-                    </p>
-                    <p   style="font-size: 15px; color: grey">
-                             <u> No function declaration inside if </u>--> The way the code is processed is inconsistent
-                    </p>
-                    <p   style="font-size: 15px; color: grey">
-                        <u> Not anonymous </u>--> Must have  name - can't declare anonymous or else you get error
-                    </p>
-                    <p   style="font-size: 15px; color: grey">
-                        
-                    </p>
-                  </div>
-                </div>
-                
+            <div style="height:100%; width: 100%">
+                <h3 id="Javascript" >Javascript </h3> </br>
+                <h3 id="Scrum" >Scrum and Agile </h3> </br>
+                <h3 id="Server"> Server Side </h3>
             </div>
-            
-              
-            
           </div>
-		         
-		  
-
-       	  
-        </div>
+       </div>
       </div>
     </div>
 
-    <hr  style="margin-top: 250px">
+    <hr  style="margin-top: 160px">
 
     <!-- Footer -->
     <footer >
@@ -229,102 +198,35 @@ background-size: 100% 1.2em;
         </div>
       </div>
     </footer>
-
-    <script type="text/javascript">
-       //document.getElementById("#one p:second").innerHTML("value");
-      /* $("#one p:nth-child(2)").click(function(){
-          alert("hello");
-       });*/
-       //document.getElementById("content").innerHTML = "value";
-       
-       $(".desc").scroll(function() {
-        if ($(this).scrollTop() < 30) {
-          var myDiv = document.getElementById("one"); // get the div
-          var myParagraphs = myDiv.getElementsByTagName('P'); //get all paragraphs inside the div
-          var myFirstPar = myParagraphs[0];
-          var mySecondPar = myParagraphs[1];
-          var myThirdPar = myParagraphs[2];
-          var myFourthPar = myParagraphs[3];
-           myFirstPar.innerHTML = "<u> Hoisting </u> --> Functions are hoisted to the top of the scope so you can call functions before they are written";
-             mySecondPar.innerHTML = " <u>No function declaration inside if </u> --> The way the code is processed is inconsistent";
-               myThirdPar.innerHTML = "<u> Not anonymous </u>--> Must have  name - can't declare anonymous or else you get error";
-               myFourthPar.innerHTML  = "";
-               myFirstPar.style.color="grey";
-               mySecondPar.style.color = "grey";
-            myThirdPar.style.color = "grey";
-             myFourthPar.style.color = "grey";
-        }
-        if ($(this).scrollTop() > 60 && $(this).scrollTop() < 100) {
+ <script>
+    $("#Javascript").click(function(){
+       $("#Scrum, #Server").fadeOut("slow", function(){
+            window.location.href = "javascript.html";
+       });
       
-          var myDiv = document.getElementById("one"); // get the div
-          var myParagraphs = myDiv.getElementsByTagName('P'); //get all paragraphs inside the div
-          var myFirstPar = myParagraphs[0];
-          var mySecondPar = myParagraphs[1];
-           var myThirdPar = myParagraphs[2];
-           var myFourthPar = myParagraphs[3];
-           
-           myFirstPar.innerHTML = 
-           "<u> Function is assigned to a variable name. </u> --> [JavaScript] supports passing functions as arguments to other functions, returning them as the values from other functions, and assigning them to variables or storing them in data structures”";
-           mySecondPar.innerHTML =
-           "<u> Anonymous functions </u> -->  function name is optional in function expressions, and we call these anonymous ";
-           myThirdPar.innerHTML =
-           "<u> Variable declaration hoisting  </u>--> variable declaration are hoisted to the top, but not its contents. Thus, in function expression var A = function() {}; .. var A is hoisted to the top, but not the content. ";
-           myFourthPar.innerHTML =
-           "B2(); </br> var B2 = function(){}; // does not work because <u> var B2</u>  gets hoisted to the top, but not the content. ";
-           mySecondPar.style.color = "grey";
-            myThirdPar.style.color = "grey";
-             myFourthPar.style.color = "black";
-          }
-      if ($(this).scrollTop() > 110 && $(this).scrollTop() < 180) {
-          var myDiv = document.getElementById("one"); // get the div
-          var myParagraphs = myDiv.getElementsByTagName('P'); //get all paragraphs inside the div
-          var myFirstPar = myParagraphs[0];
-          var mySecondPar = myParagraphs[1];
-           var myThirdPar = myParagraphs[2];
-           var myFourthPar = myParagraphs[3];
-            mySecondPar.style.color = "black";
-            myThirdPar.style.color = "black";
-             myFourthPar.style.color = "black";
-             
-             myFirstPar.innerHTML = 
-           "<u> Same as function expression </u> --> without bracket it becomes function declaration, but declaration can't be anonymous so you get ERROR";
-           mySecondPar.innerHTML =
-           " (function(){} + 1);   -->   // you get string \"function(){}\"";
-           myThirdPar.innerHTML =
-           "var foo = (function(){});  --> // resulting function assigned to foo ";
-           myFourthPar.innerHTML =
-           "var bar = function(){}; </u> -->  // resulting function assigned to bar ";
-      }
-      if ($(this).scrollTop() > 190) {
-         var myDiv = document.getElementById("one"); // get the div
-          var myParagraphs = myDiv.getElementsByTagName('P'); //get all paragraphs inside the div
-          var myFirstPar = myParagraphs[0];
-          var mySecondPar = myParagraphs[1];
-           var myThirdPar = myParagraphs[2];
-           var myFourthPar = myParagraphs[3];
-            mySecondPar.style.color = "grey";
-            myThirdPar.style.color = "grey";
-             myFourthPar.style.color = "grey";
-              myFirstPar.innerHTML = 
-           "<u>  The function name is only accessible within the function </u> --> typeof (function_name) outside of the scope results in ERROR";
-           mySecondPar.innerHTML =
-           " <u>  useful for recursion </u> ";
-           myThirdPar.innerHTML =
-           "  The named function becomes a global variable, is hoisted like a function declaration, and actually ends up creating multiple instances of the same function.";
-           myFourthPar.innerHTML =
-           "";
-
-
-      }
+    });
+     $("#Scrum").click(function(){
+       $("#Javascript, #Server").fadeOut("slow", function(){
+            window.location.href = "Scrum.html";
+       });
       
-     
+    });
+     $("#Server").click(function(){
+       $("#Javascript, #Scrum").fadeOut("slow", function(){
+            window.location.href = "Server.html";
+       });
+      
+    });
+ </script>
 
-        
-      });
-  
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      
+      <script src="js/clean-blog.min.js"></script>
+      
 
-
-    </script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
 
     
 </body>
