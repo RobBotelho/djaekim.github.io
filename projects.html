@@ -20,6 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.2/umd/popper.min.js" ></script>
+    
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -29,53 +30,81 @@
     <script src="js/fancy.js"></script>
 
     <style type="text/css">
-       #container{
-         
-         width: 1000px;
-         height: 1000px;
-         margin: 0 auto;
-        
-       }
-       #coup{
-        position: relative;
-        background-image: url("img/coup.jpg");
-         background-repeat: no-repeat;
-		  background-size: cover;
-       
-         width: 400px;
-         height: 500px;
-  
-         
-          float: left;
-       }
-       #tennis{
-
-          position: relative;
-           background-image: url("img/project1.JPG");
-           background-repeat: no-repeat;
-		  background-size: 500px 500px;
-      background-position: 0px 0px;
       
-          width:500px;
-         height: 500px;
-          
-          float: right;
+       #wrapper{
+         height: 2000px;
+         width: 80%;
+         text-align: center;
+
+         
+         
+         
        }
-        #coup_content{
-           position: absolute;
-         width: 400px;
-         height: 400px;
-         margin-top: 500px;
+       .sections{
+        
+         height: 25vw;
+
+         width:80vw;
+         
+       
+         margin-right: 30px;
+         margin-bottom: 40px;
+         margin-left: 10vw;
+          border: 1px solid none;
          
           
+           
        }
-       #tennis_content{
-          position: absolute;
- width:499px;
-         height: 400px;
-          margin-top: 500px;
+       
+    
+       #tennis{
+            
           
+           background-image: url("img/project1.JPG");
+         
+        
+	
+       }
+       #chat{
+           background-image: url("img/chat.png");
+            
+            
+       }
+       #budget{
+            background-image: url("img/budget.JPG");
+         
+       }
+       #pong{
+         background-image: url("img/pong.JPG");
+       }
+       
+       .info{
+           font-family: Open Sans;
+           border: 1px solid none;
+           height: 100%;
+           float: right;
+           width: 35%;
+           font-size: 1.4vw;
+           text-align: left;
+           padding: 4px;
+       }
+       .img{
+         border: 1px solid none;
+           height: 100%;
+           float: left;
+           width: 62%;
+             background-size: 100%;
+           background-repeat: no-repeat;
+       }
+       hr{
+           background-color: dimgrey !important;
+          color: dimgrey !important;
+          border: solid 0.5px dimgrey !important;
+          width: 100%;
+          margin-bottom:60px;
           
+          margin-left: 10vw;
+        
        }
 
 
@@ -129,30 +158,63 @@
       </div>
     </header>
 
-    <!-- Main Content -->
-    <div id="container"> 
-      <div id="coup">
-        <div id="coup_content">
-             <figcaption style="color:black"> Coup Deceptive BoradGame (In Progress) </figcaption> 
-             <p>Currently converting a favourite board game into an online game,
-                using socket.io, jQuery, HTML and CSS. I have already implemented chat systems, turn based scheme and
-                various event handlers for different character cards. There is a slight bug in the code that I have been looking into for
-                awhile. Now, I am rewriting the code to find the bug and make it more robust. I will add score board soon.</p>
-        </div>
-      </div>
-
-      <div id="tennis">
-        <div id="tennis_content">
+    <div id="wrapper">
+      <div class="sections">
+        <div class="img" id="tennis">
+         </div>
+        <div class="info">
            <a href="http://djaekim-com.win.stackstaging.com" style="color:red"> Tennis Match DataBase ("click Me") </a>
-           <p> Trying to get familiar with using Google API and practice using MySQL and PHP.
-                Players will use customized Google API, which they will select list of tennis courts that are close to home and attach
-                their phone number and email to the courts. Project attempts to provide better tennis network in Greater Toronto Area.</p>
+           <p>
+           <i class="fa fa-hand-o-right" aria-hidden="true"> Players will use customized Google MAP API to select list of tennis courts that are close to their home and attach
+                their phone number and email address. Project attempts to provide better tennis network in Greater Toronto Area.</i>  <br><br>
+                <i class="fa fa-hand-o-right" aria-hidden="true"> <u> Technologies</u>: PHP, MySql, Javascript </i> 
+             </p>
+                
         </div>
       </div>
+      <hr>
+      <div class="sections">
+         <div class="img" id="budget">
+           
+         </div>
+        
 
+        <div class="info">
+           <a href="http://djbudget-com.stackstaging.com/" style="color:red"> Budget App ("click Me") </a>
+           <p> 
+              <i class="fa fa-hand-o-right" aria-hidden="true"> A simple app designed to help students keep track of their budgets. </i>  <br><br>
+                <i class="fa fa-hand-o-right" aria-hidden="true"> <u> Technologies</u>: Javascript </i> 
+                <i class="fa fa-hand-o-right" aria-hidden="true"> <u> Future work</u>: Graphical Analysis, persistent database storage for accumulation of data</i> 
+            
+
+             
+           </p>
+        </div>
+      </div>
+        <hr>
+      <div class="sections">
+         <div class="img" id="pong">
+           
+         </div>
+        
+
+        <div class="info">
+           <a href="http://djpong-com.stackstaging.com/" style="color:red"> Pong ("click Me") </a>
+           <p> 
+              <i class="fa fa-hand-o-right" aria-hidden="true"> A simple customized pong game. Created in order to practice Javascript </i>  <br><br>
+                <i class="fa fa-hand-o-right" aria-hidden="true"> <u> Technologies</u>: Javascript </i> 
+                
+            
+
+             
+           </p>
+        </div>
+     
+       
 
     </div>
-    <hr>
+
+
 
     <!-- Footer -->
     <footer>
