@@ -1,552 +1,202 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Botelho Lab </title>
-  <meta name="viewport" content="initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/customize-twitter-1.1.js" type="text/javascript"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|BioRhyme" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
-  <style>
-  @font-face {
-   font-family: "HelveticaNeueLTPro-Roman";
-   src: url("fonts/HelveticaNeueLTPro-Roman.otf");
+	 <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|BioRhyme" rel="stylesheet">
+	<style>
+	@font-face {
+         font-family: "HelveticaNeueLTPro-Roman";
+         src: url("fonts/HelveticaNeueLTPro-Roman.otf");
+         }
+	  .navigation-container{
+position: fixed;
+    width: 15%;
+    border: 1px solid black;
+    height: 100%;
+    left: 0;
+    top: 0;
+    
+	  }
+	  .navigation a{
+		text-decoration: none;
+    font-family: "HelveticaNeueLTPro-Roman";
+    display: block;
+    text-align: right;
+    padding: 7%;
+    font-size: 1vw;
+    border-bottom: 1px solid grey;
+    color: azure;
+}
+ .navigation span{
+ 	position: fixed;
+    bottom: 0;
+    color: white;
+    /* padding: 5%; */
+    /* text-align: center; */
+    /* display: block; */
+     font-family: "HelveticaNeueLTPro-Roman";
+     font-size:10%;
+    padding: 1%;
  }
- @font-face {
-   font-family: "GatsbyFLF";
-   src: url("fonts/GatsbyFLF.ttf");
- }
- html {
-   max-height:10000px;
- }
- body {
-   font-family: "HelveticaNeueLTPro-Roman";
-   opacity: 1;
-   transition: 1s opacity;
 
 
- }
-
- body.fade-out {
-   opacity: 0;
-   transition: none;
- }
- .sidenav {
-   height: 100%;
-   width: 0px;
-   position: fixed;
-   z-index: 1;
-   top: 0;
-   left: 70px;
-   background: #434343; /* For browsers that do not support gradients */
-   background: -webkit-linear-gradient(#434343, black); /* For Safari 5.1 to 6.0 */
-   background: -o-linear-gradient(#434343, black);/* For Opera 11.1 to 12.0 */
-   background: -moz-linear-gradient(#434343, black); /* For Firefox 3.6 to 15 */
-   background: linear-gradient(#434343, black);/* Standard syntax */
-
-   overflow-x: hidden;
-   transition: 0.5s;
-   padding-top: 9px;  
- }
- .sidenav a {
-   padding: 22px 8px 23px 30px;
-   text-decoration: none;
-   font-size: 25px;
-   color: #F0F2F0;
-   display: block;
-   font-weight: 10;
-   transition: 0.3s;
-   /* font-family: 'Roboto Condensed', sans-serif; */
-   letter-spacing: 2px;
-   text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
-  /* font-family: "HelveticaNeueLTPro-Roman",Helvetica,Arial,sans-serif; */
-  /* font-family: 'Anonymous Pro', monospace; */
-   font-family: "HelveticaNeueLTPro-Roman";
- }
- .sidenav a:hover {
-   color: grey;
- }
- .sidenav .closebtn {
-   position: absolute;
-   top: 0;
-   right: 25px;
-   font-size: 36px;
-   margin-left: 50px;
- }
- #menu{ 
-  z-index:1;
-  font-size: 30px;
-  position: fixed;
-  left: 0;
-  height: 100%;
-  top: 0;
-  width: 70px;
-  text-align: center
-
-}
-
-.gradient{
- background: #434343; /* For browsers that do not support gradients */
- background: -webkit-linear-gradient(#434343, black); /* For Safari 5.1 to 6.0 */
- background: -o-linear-gradient(#434343, black);/* For Opera 11.1 to 12.0 */
- background: -moz-linear-gradient(#434343, black); /* For Firefox 3.6 to 15 */
- background: linear-gradient(#434343, black);/* Standard syntax */
-}
-@media screen and (max-height: 450px) {
- .sidenav {padding-top: 15px;}
- .sidenav a {font-size: 18px;}
-}
-#main {
-  margin-left: 70px;
-  transition: margin-left .5s;
-  /* margin: 0; */
-  background-color: rgba(255, 255, 255, 0.46);
-  height: 100%;
-  z-index: 0.1;
-  min-width: 700px;
-
-}
-p{
- font-size:17px;
-
-}
-#main-content{
- padding:0px 10vw;
-}
-#main-content p{
- font-size: 1.4vw;
- font-weight:10;
- color:grey;
-}
-.twitter{
- height: 10vh;
-}
-.twitter-timeline{
- text-align: center;
- margin-top:20px;
-}
-.border-bottom{
- border-bottom:1px solid grey;
- padding:10px 0;
-}
-.header{ 
-  width: 100%;
-  font-family: 'BioRhyme', serif;
-
-  height: 50vh;
-  background-image: url(images/main.jpg); 
 
 
-  
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 6vh;
-
-
-}
-.header-images{
-        height: 94%;
+	  .newsfeed-container{
+position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 15%;
+    border: 1px solid black;
+	  }
+	  .header{
+	  	    position: fixed;
+    top: 0;
+    height: 40%;
+    left: 15%;
     width: 70%;
-    margin: 1% 1%;
-    float: left;
-    background-color: white;
-
+    border: 1px soild black;
    
-}
-.header-comments{
-      width: 28%;
-    height: 100%;
-    float: right;
-    background-color: rgba(0, 0, 0, 0.36);
-}
+       background-image: url(images/main.jpg); 
+         background-repeat: no-repeat;
+         background-size: cover;
 
-
-.paragraphs{
-             /*   background-color: #f1f1f1;
-                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); 
-                padding:20px 20px; */
-                width:70%;
-                float: left;
-                height: 96.5vh;
-              
-                
-              }
-              h1{
-               /*font-family: 'Anonymous Pro', monospace;*/
-                font-family: "HelveticaNeueLTPro-Roman";
-               letter-spacing:2px;
-               font-weight: 100;
-               font-size:4vw;         
-               text-align:center;
-               color:#332f4a;
-             }
-     
+	  }
+	  .header h1{
+	  	    font-family: 'BioRhyme', serif;
+	  	     text-align:center;
+	  	     font-size:5vw;
+         color:azure;
+         margin: 0;
+         padding:6vh 0;
+         letter-spacing: .3em;
+         text-shadow: 
+         0 -1px 0 #fff, 
+         0 1px 0 #2e2e2e, 
+         0 2px 0 #2c2c2c, 
+         0 3px 0 #2a2a2a, 
+         0 4px 0 #282828, 
+         0 5px 0 #262626, 
+         0 6px 0 #242424, 
+         0 7px 0 #222, 
+         0 8px 0 #202020, 
+         0 9px 0 #1e1e1e, 
+         0 10px 0 #1c1c1c, 
+         0 11px 0 #1a1a1a, 
+         0 12px 0 #181818, 
+         0 13px 0 #161616, 
+         0 14px 0 #141414, 
+         0 15px 0 #121212, 
+         0 22px 30px rgba(0, 0, 0, 0.9);
+	  }
+	  .header h4{
+	  	  font-family: 'BioRhyme', serif;
+	  	     text-align:center;
+	  	     font-size:1vw;
+         color:azure;
+         margin: 0;
          
-          .newsfeed{
-                float: right;
-                margin-top:0.7%;
-    width: 28%;
-    /* height: 100%; */
-   /* box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); */
-    height: 99vh;
-          }
-          @media (min-width: 1200px){
+         letter-spacing: .3em;
+	  }
+	  .main-content-container{
+	     top: 40%;
+    position: fixed;
+    left: 15%;
 
-            .container {
-              width: 90%;
-              }}
-              .announcements-wrapper{
-                  width:100%;
-                  height:35%;
-                  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-                    margin-bottom: 5%;
-              
+    width: 70%;
 
-              }
-              .announcements{
-                    width: 100%;
-    height: 100%;
-   
-              }
-              
-              .twitter{
-                width:100%;
-               height: 56.6%;
-                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-              }
-              h1{
-             font-family: 'Ultra', serif;
-             color:azure;
-              margin: 0;
-              padding:6vh 0;
+    height: 55%;
+	  }
+	  .footer{
+           bottom:0;
+		    position: fixed;
+		    left: 15%;
+    width: 70%;
+		    height:5%;
+		
+		    background-color:black;
+		  
+	  }
+	  .smooth-color{
+	  	  background: #434343; /* For browsers that do not support gradients */
+         background: -webkit-linear-gradient(#434343, black); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(#434343, black);/* For Opera 11.1 to 12.0 */
+         background: -moz-linear-gradient(#434343, black); /* For Firefox 3.6 to 15 */
+         background: linear-gradient(#434343, black);/* Standard syntax */
+	  }
+	  @media (max-width: 800px) {
+	    .navigation-container {
+	        display:none;
+	    }
+	     .newsfeed-container{
+	     	display:none;
+	     }
+	     .main-content-container{
+	    
+    left:0;
+   width:100%;
+  
+	  }
+	   .header{
+	   	 left: 0;
+         width: 100%;
+	   }
+	   .footer{
+left: 0;
+         width: 100%;
+	   }
+	}
+	.calendar{
+		width: 100%;
+    height: 20%;
+	}
+	.announcements-from-lab{
+		    width: 100%;
+  			  height: 20%;
+	}
+	.twitter{
+		width:100%;
+		height:60%;
+	}
+	
+    </style>
+	<title>The Botelho Lab</title>
+</head>
+<body>
+	<div class='navigation-container smooth-color'>
+	
+	 <div class='navigation'>
+	    <a href="#" >HOME</a>
+        <a href="#" >THE CREW</a>
+        <a href="#" >PROJECTS</a>
+        <a href="#" >PUBLICATION</a>
+        <a href="#" >MEDIA</a>
+        <a href="#" >FUNDING</a>
+        <span> BOTELHO LAB </span>
+	 </div>
+	</div>
+	<div class='newsfeed-container smooth-color'>
+		<div class='calendar'>
+           <p id="demo"></p>
 
-    letter-spacing: .3em;
-    text-shadow: 
-      0 -1px 0 #fff, 
-      0 1px 0 #2e2e2e, 
-      0 2px 0 #2c2c2c, 
-      0 3px 0 #2a2a2a, 
-      0 4px 0 #282828, 
-      0 5px 0 #262626, 
-      0 6px 0 #242424, 
-      0 7px 0 #222, 
-      0 8px 0 #202020, 
-      0 9px 0 #1e1e1e, 
-      0 10px 0 #1c1c1c, 
-      0 11px 0 #1a1a1a, 
-      0 12px 0 #181818, 
-      0 13px 0 #161616, 
-      0 14px 0 #141414, 
-      0 15px 0 #121212, 
-      0 22px 30px rgba(0, 0, 0, 0.9);
-                
-              }
-              .images-gallery{
-                width:100%;
-                height:100%;
-              }
-              .press .para{
-                  text-align:center;
-                  display: table-cell; 
-                  vertical-align: middle;
-              }
-              .para p{
-                font-size:1vw;
-                width: 60%;
-                /* padding: 10px 10px; */
-              /*  font-family: 'Anonymous Pro', monospace; */
-               font-family: "HelveticaNeueLTPro-Roman";
-                margin: 0 auto;
-               
-              }
-              .press{
-                 display:table;
-                  height:100%;
-                  width:100%;
-              }
-              .carousel-inner .item{
-                width:100%;
-                height:100%;
-                
-              }
-                .carousel{
-                width:100%;
-                height:100%;
-              }
-              .carousel-inner{
-                height:100%;
-              }
-              .carousel-control.left {
-                background-image:none;
-              }
-              .carousel-control.right {
-                background-image:none;
-              }
-              .carousel-indicators li{
-                background-color: grey;
+			
+		</div>
+		<div class='announcements-from-lab'>
 
-              }
-               .carousel-indicators .active{
-                background-color:  black;
-
-              }
-              .carousel-control .glyphicon-chevron-left,
-              .carousel-control .glyphicon-chevron-right{
-              color:black;
-              }
-              .carousel-control{
-                opacity:0.5;
-              }
-              .glyphicon-chevron-right:before {
-                    content: url('icons/right.png');
-
-                }
-                  .glyphicon-chevron-left:before {
-                    content: url('icons/left.png');
-                    
-                }
-                .img-{
-                    float: left;
-    width: 48%;
-    min-width:48%;
-    height: 47%;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-    margin: 1%;
-                }
-                .sublink-container{
-                      width: 100%;
-
-                      display:none;
-    height: 100%;
-    /* position: absolute; */
-    /* overflow: auto; */
-
-    padding: 6.5% 25%;
-                }
-                .sublinks-maincontent{
-
-                 
-               
-     
-    height: 100%;
-   
-    background-color: white;
-                }
-                .header-content{
-                    /* display:none;*/
-
-                    
-                }
-                .navigation{
-                  
-                  width:100%;
-                  height:40%;
-               
-                }
-                .narration{    
-                  width:100%;
-                  height:60%;
-                  
-                }
-                .narration p{
-                    font-size:1vw;
-              
-                 font-family: "HelveticaNeueLTPro-Roman";
-                 text-align:center;
-                 color:grey;
-                 margin: 4%;
-                 
-                }
-                .navigation li{
-                 float: left;
-                 font-size:1vw;
-                 list-style: none;
-                 font-family: "HelveticaNeueLTPro-Roman";
-                 margin: 4%;
-                 border-bottom:1px solid grey;
-                }
-                .navigation li:hover{
-                  color:grey;
-                  cursor:pointer;
-                }
-
-
-
-
-
-            </style>
-          </head>
-          <body>
-            <script>document.body.className += ' fade-out';</script>
-            <div id='navigation-container'>
-             <div id='menu' class='gradient'>
-              <span style="font-size:60px;cursor:pointer; color:white;   cursor: pointer;" onclick="Nav()"> &#9776; </span>
-            </div>
-            <div id="mySidenav" class="sidenav">
-              <a class='border-bottom' onclick='show_header()'> <span> HOME </span></a>
-              <a class='border-bottom' onclick='hide_header()'> <span> THE CREW </span></a>
-              <a href="#" class='border-bottom'>PROJECTS</a>
-              <a href="#" class='border-bottom'>PUBLICATION</a>
-              <a href="#" class='border-bottom'>MEDIA</a>
-              <a href="#" class='border-bottom'>FUNDING</a>
-             
-                   </div>
-                 </div>
-                 <div id="main">
-                    <div class='header'>
-                      <div class='sublink-container'>
-                        <div class='sublinks-maincontent'>
-                          <div class='navigation'>
-                           <li> Research 1</li>
-                           <li> Research 1</li>
-                           <li> Research 1</li>
-                          </div>
-                          <div class='narration'>
-                            <p> Organelle Lab At Ryerson </p>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class='header-content'>
-                        <h1> BOTELHO <br> LAB</h1>
-                        <p style='text-align:center; color: azure;font-size:30px; font-weight:500; letter-spacing:2px'> Organelle Lab At Ryerson </p> 
-                      </div>  
-                    </div>
-                  
-               
-                  <div class="container" > 
-                    <div class="row">
-                     <div class="col-lg-8 col-md-10 mx-auto" style='width:100%; margin-top:2.5%'>
-              
-                      <div class='paragraphs'>
-                        <div class='images-gallery'>
-                          <div class='img'></div>
-                            <div class='img-'></div>
-                            <div class='img-'></div>
-                            <div class='img-'></div>
-                            <div class='img-'></div>
-                        </div>
-                      </div>
-                      <div class='newsfeed'>
-                        <div class='announcements-wrapper'>
-                          <div class='announcements'>
-
-                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                  <div class="item active">
-                                    <div class='press'>
-
-                                      <div class='para'> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p></div>
-                                    </div>
-                                  </div>
-
-                                <div class="item">
-                                     <div class='press'>
-
-                                      <div class='para'><p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> </div>
-                                    </div>
-                                  </div> 
-                                
-                                  
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                  <span class="glyphicon glyphicon-chevron-left"></span>
-                                  <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                  <span class="glyphicon glyphicon-chevron-right"></span>
-                                  <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-
-                          </div>
-
-
-                        </div>
-                       
-                        <div class='twitter'>
-                         
-                            <a class="twitter-timeline" data-chrome="noscrollbar" data-width="99%" data-height="95%" data-theme="light" data-chrome="noborders" href="https://twitter.com/Botelho_Lab?ref_src=twsrc%5Etfw">Tweets by Botelho_Lab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                              <script>
-                               var options = {
-                                   "url": "css/twitter.css"
-                               };
-                               CustomizeTwitterWidget(options);
-                               </script>
-                         
-                        </div>
-                      </div>
-
-
-
-
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <script>
-               var narr = ['we are good at what we do', 'welcome to our research site', 'for more information on collab'];
-               var index = 0;
-               function Nav(){
-
-                if (document.getElementById("main").style.marginLeft == "70px" || document.getElementById("main").style.marginLeft == ""){
-                 document.getElementById("mySidenav").style.width = "250px";
-                   document.getElementById("main").style.marginLeft = "320px"; //312
-                 } else {
-
-                  document.getElementById("mySidenav").style.width = "0";
-                  document.getElementById("main").style.marginLeft= "70px";
-                }
-              }
-              $(function() {
-               $('body').removeClass('fade-out');
-               setTimeout(function(){  
-
-                 $('.heading').slideDown('400');
-               }, 500);
-               
-               setInterval(function(){
-                 ++index;
-                 if (index == 3){
-                  index = 0;
-                 }
-                    $('.narration p').text(narr[index]);
-               }, 3000);
-
-             });
-              function hide_header(){
-                $('.header-content').fadeOut();
-                $('.sublink-container').slideDown();
-              }
-              function show_header(){
-                  $('.sublink-container').slideUp();
-                $('.header-content').fadeIn();
-              
-              }
-
-
-
-
-           </script>
-         </body>
-         </html>
+		</div>
+		<div class='twitter'>
+		</div>
+	</div>
+	<div class='header'>
+		<h1> BOTELHO LAB </h1>
+		<h4> ORGANELLE LAB AT RYERSON </h4>
+	</div>
+	<div class='main-content-container'>
+	</div>
+	<div class='footer'>
+	</div>
+	<script>
+			document.getElementById("demo").innerHTML = Date();
+			</script>
+</body>
+</html>
