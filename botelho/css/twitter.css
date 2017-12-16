@@ -1,15 +1,17 @@
-.timeline-Widget--edge{
-	border-radius: 0 !important;
+.timeline-Widget--edge {
+    border-radius: 0px !important;
 }
 .timeline-Widget{
 	border-radius: 0 !important;
-	margin:20px 0px;
+
 }
 .timeline-Footer {
     padding :0px !important;
     font-size: 12px;
+    
 }
 .timeline-Body,
 .timeline-Header-title {
 	 font-family: "HelveticaNeueLTPro-Roman" !important;
 }
+
