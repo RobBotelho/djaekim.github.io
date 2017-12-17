@@ -1,0 +1,143 @@
+   #_T, #_G, #_T2, #_G2,#_T3, #_G3,#_T4, #_G4{
+         color:red;
+    }
+    /*
+    #_T, #_T2,#_T3, #_T4{
+         color:red;
+    }
+    #_G, #_G2, #_G3, #_G4{
+         color:blue;
+    }
+     #_C, #_C2,#_C3, #_C4{
+         color:green;
+    }
+     #_A, #_A2, #_A3, #_A4{
+         color:yellow;
+    }
+    */
+    
+    .right_helix > div
+    {position:absolute;
+     transform: scale(0);
+    
+     }
+    #_A, #_T{
+       top: 0%;
+       size: 0;
+    }
+    #_C, #_G{
+       top: 15%;
+    }
+    #_A2, #_T2{
+       top: 30%;
+    }
+    #_C2, #_G2{
+       top: 45%;
+    }
+    #_A3, #_T3{
+       top: 60%;
+    }
+    #_C3, #_G3{
+       top: 75%;
+    }
+    #_A4, #_T4{
+       top: 90%;
+    }
+    /*#_C4, #_G4{
+       top: 90%;
+    }*//*
+    @-webkit-keyframes one_{
+        0% { Left:5%; z-index: 0; -webkit-transform: scale(1)}
+        25% { -webkit-transform: scale(2); }
+        50% { Left:9%; z-index: 1; -webkit-transform: scale(1)}
+        75% { -webkit-transform: scale(0.5); }
+        100% { Left:5%; z-index: 0; -webkit-transform: scale(1)}
+    }
+     @-webkit-keyframes one_x{
+        0% { Left:5%; z-index: 1; -webkit-transform: scale(1)}
+        25% { -webkit-transform: scale(2); }
+        50% { Left:9%; z-index: 0; -webkit-transform: scale(1)}
+        75% { -webkit-transform: scale(0.5); }
+        100% { Left:5%; z-index: 1; -webkit-transform: scale(1)}
+    }*/
+    @-webkit-keyframes one_{
+        0% { Left:100%; z-index: 0; -webkit-transform: scale(1)}
+        25% { -webkit-transform: scale(2); }
+        50% { Left:70%; z-index: 1; -webkit-transform: scale(1)}
+        75% { -webkit-transform: scale(0.5); }
+        100% { Left:100%; z-index: 0; -webkit-transform: scale(1)}
+    }
+     @-webkit-keyframes one_x{
+        0% { Left:100%; z-index: 1; -webkit-transform: scale(1)}
+        25% { -webkit-transform: scale(2); }
+        50% { Left:70%; z-index: 0; -webkit-transform: scale(1)}
+        75% { -webkit-transform: scale(0.5); }
+        100% { Left:100%; z-index: 1; -webkit-transform: scale(1)}
+    }
+    
+    #_A, #_A9{
+        -webkit-animation: one_ 4s infinite;
+        -moz-animation:one_ 4s infinite;
+    }
+    #_T, #_T9{
+        -webkit-animation: one_x 4s 2s infinite;
+        -moz-animation:one_x 4s 2s infinite;
+    }
+    #_C, #_C9{
+        -webkit-animation: one_ 4s 0.5s infinite;
+        -moz-animation:one_ 4s 0.5s infinite;
+    }
+    #_G, #_G9{
+        -webkit-animation: one_x 4s 2.5s infinite;
+        -moz-animation:one_x 4s 2.5s infinite;
+    }
+    #_A2, #_A10{
+        -webkit-animation: one_ 4s 1s infinite;
+        -moz-animation:one_ 4s 1s infinite;
+    }
+    #_T2, #_T10{
+        -webkit-animation: one_x 4s 3s infinite;
+        -moz-animation:one_x 4s 3s infinite;
+    }
+    #_C2, #_C10{
+        -webkit-animation: one_ 4s 1.5s infinite;
+        -moz-animation:one_ 4s 1.5s infinite;
+    }
+    #_G2, #_G10{
+        -webkit-animation: one_x 4s 3.5s infinite;
+        -moz-animation:one_x 4s 3.5s infinite;
+    }
+    #_A3,#_A11{
+        -webkit-animation: one_ 4s 2s infinite;
+        -moz-animation:one_ 4s 2s infinite;
+    }
+    #_T3,#_T11{
+        -webkit-animation: one_x 4s 4s infinite;
+        -moz-animation:one_x 4s 4s infinite;
+    }
+    #_C3,#_C11{
+        -webkit-animation: one_ 4s 2.5s infinite;
+        -moz-animation:one_ 4s 2.5s infinite;
+    }
+    #_G3,#_G11{
+        -webkit-animation: one_x 4s 4.5s infinite;
+        -moz-animation:one_x 4s 4.5s infinite;
+    }
+    #_A4,#_A12{
+        -webkit-animation: one_ 4s 3s infinite;
+        -moz-animation:one_ 4s 3s infinite;
+    }
+    #_T4,#_T12{
+        -webkit-animation: one_x 4s 5s infinite;
+        -moz-animation:one_x 4s 5s infinite;
+    }
+   /* #_C4,*/#_C12{
+        -webkit-animation: one_ 4s 3.5s infinite;
+        -moz-animation:one_ 4s 3.5s infinite;
+    }
+    /*#_G4,*/#_G12{
+        -webkit-animation: one_x 4s 5.5s infinite;
+        -moz-animation:one_x 4s 5.5s infinite;
+    }
+    
+    
