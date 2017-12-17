@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-	 <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|BioRhyme" rel="stylesheet">
-	       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <head>
+      <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|BioRhyme" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	 <script src="js/customize-twitter-1.1.js" type="text/javascript"></script>
-	<style>
-	@font-face {
+      <script src="js/customize-twitter-1.1.js" type="text/javascript"></script>
+      <style>
+         @font-face {
          font-family: "HelveticaNeueLTPro-Roman";
          src: url("fonts/HelveticaNeueLTPro-Roman.otf");
          }
          html,body{
-          width:100%
-          height:100%;
+         width:100%
+         height:100%;
          }
          body{
- min-width:1000px;
+         min-width:1000px;
+         opacity: 1;
+         transition: 1s opacity;
          }
-	  .navigation-container{
-position: fixed;
-    width: 15%;
-   
-    height: 100%;
-    left: 0;
-    top: 0;
-    
-	  }
-	  .navigation a{
-		text-decoration: none;
-    font-family: "HelveticaNeueLTPro-Roman";
-    display: block;
-    text-align: right;
-    padding: 7%;
-    font-size: 1vw;
-    border-bottom: 1px solid grey;
-    color: azure;
-}
- .navigation span{
- 	position: fixed;
-    bottom: 0;
-    color: white;
-    /* padding: 5%; */
-    /* text-align: center; */
-    /* display: block; */
-     font-family: "HelveticaNeueLTPro-Roman";
-     font-size:10%;
-    padding: 1%;
- }
-
-
-
-
-	  .newsfeed-container{
-position: fixed;
-    height: 100%;
-    right: 0;
-    top: 0;
-    width: 15%;
-    
-	  }
-	  .header{
-	  	    position: fixed;
-    top: 0;
-    height: 40%;
-    left: 15%;
-    width: 70%;
-    border: 1px soild black;
-   
-       background-image: url(images/main.jpg); 
+         body.fade-out {
+         opacity: 0;
+         transition: none;
+         }
+         
+         .navigation-container{
+         position: fixed;
+         width: 15%;
+         height: 100%;
+         left: 0;
+         top: 0;
+         }
+         .navigation a{
+         text-decoration: none;
+         font-family: "HelveticaNeueLTPro-Roman";
+         display: block;
+         text-align: right;
+         padding: 7%;
+         font-size: 1vw;
+         border-bottom: 1px solid grey;
+         color: azure;
+         }
+         .navigation span{
+         position: fixed;
+         bottom: 0;
+         color: white;
+         /* padding: 5%; */
+         /* text-align: center; */
+         /* display: block; */
+         font-family: "HelveticaNeueLTPro-Roman";
+         font-size:10%;
+         padding: 1%;
+         }
+         .navigation a:hover{
+         color:grey;
+         }
+         .newsfeed-container{
+         position: fixed;
+         height: 100%;
+         right: 0;
+         width: 15%;
+         }
+         .header{
+         position: fixed;
+         top: 0;
+         height: 40%;
+         left: 15%;
+         width: 70%;
+         border: 1px soild black;
+         background-image: url(images/main.jpg); 
          background-repeat: no-repeat;
          background-size: cover;
-
-	  }
-	  .header h1{
-	  	    font-family: 'BioRhyme', serif;
-	  	     text-align:center;
-	  	     font-size:5vw;
+         }
+         .header h1{
+         font-family: 'BioRhyme', serif;
+         text-align:center;
+         font-size:5vw;
          color:azure;
          margin: 0;
          padding:6vh 0;
@@ -99,211 +99,370 @@ position: fixed;
          0 14px 0 #141414, 
          0 15px 0 #121212, 
          0 22px 30px rgba(0, 0, 0, 0.9);
-	  }
-	  .header h4{
-	  	  font-family: 'BioRhyme', serif;
-	  	     text-align:center;
-	  	     font-size:1vw;
+         }
+         .header h4{
+         font-family: 'BioRhyme', serif;
+         text-align:center;
+         font-size:1vw;
          color:azure;
          margin: 0;
-         
          letter-spacing: .3em;
-	  }
-	  .main-content-container{
-	  display: flex;
-    
-	     top: 40%;
-
-    position: fixed;
-    left: 15%;
-    flex-direction: row;
-
-    width: 70%;
-
-    height: 55%;
-	  }
-	  .footer{
-           bottom:0;
-		    position: fixed;
-		    left: 15%;
-    width: 70%;
-		    height:5%;
-		
-		    background-color:black;
-		  
-	  }
-	  .smooth-color{
-	  	  background: #434343; /* For browsers that do not support gradients */
+         }
+         .main-content-container{
+         display: flex;
+         top: 40%;
+         position: fixed;
+         left: 15%;
+         flex-direction: row;
+         width: 70%;
+         height: 55%;
+         }
+         .footer{
+         bottom:0;
+         position: fixed;
+         left: 15%;
+         width: 70%;
+         height:5%;
+         background-color:black;
+         }
+         .smooth-color{
+         background: #434343; /* For browsers that do not support gradients */
          background: -webkit-linear-gradient(#434343, black); /* For Safari 5.1 to 6.0 */
          background: -o-linear-gradient(#434343, black);/* For Opera 11.1 to 12.0 */
          background: -moz-linear-gradient(#434343, black); /* For Firefox 3.6 to 15 */
          background: linear-gradient(#434343, black);/* Standard syntax */
-	  }
-	  @media (max-width: 1100px) {
-	    .navigation-container {
-	        display:none;
-	    }
-	     .newsfeed-container{
-	     	display:none;
-	     }
-	  
-	   .header{
-	   	 left: 0;
-         width: 100%;
-	   }
-	   .footer{
-left: 0;
-         width: 100%;
-	   }
-     .main-content-container{width:100%; left:0;}
-	}
-	
-	.calendar{
-		width: 100%;
-    height: 20%;
-    border-bottom:1px solid grey;
-	}
-	.announcements-from-lab{
-		    width: 100%;
-  			  height: 20%;
-  			 
-	}
-	.twitter{
-		width:100%;
-		height:60%;
-	}
-	.carousel {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-.carousel-inner{
-	height: 100%;
-}
-	.para p{
-		color:azure;
-		text-align:center;
-		padding:8%;
-	}
-	.carousel-control .glyphicon-chevron-left,
-         .carousel-control .glyphicon-chevron-right{
-        display:none;
          }
-        h5{
-        	color:white;
-        	 font-family: "HelveticaNeueLTPro-Roman";
-        	 text-align:center;
-        	
+         .calendar{
+         width: 100%;
+         height: 20%;
+         border-bottom:1px solid grey;
+         }
+         .announcements-from-lab{
+         width: 100%;
+         height: 20%;
+         }
+         .twitter{
+         width:100%;
+         height:60%;
+         }
+         .carousel {
+         position: relative;
+         height: 100%;
+         width: 100%;
+         }
+         .carousel-inner{
+         height: 100%;
+         }
+         .para p{
+         color:azure;
+         text-align:center;
+         padding:8%;
+         }
+         .carousel-control .glyphicon-chevron-left,
+         .carousel-control .glyphicon-chevron-right{
+         display:none;
+         }
+         h5{
+         color:white;
+         font-family: "HelveticaNeueLTPro-Roman";
+         text-align:center;
+         }
+         .img{
+         box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); 
+         flex: 1;
+         }
+         .sublink-wrapper{
+         position: relative;
+         margin: 0 auto;
+         width: 50%;
+         margin-top: 20px;
+         height: 60%;
+         background-color: white;
+         display:none;
+         }        
+         .sublink-wrapper a{
+         display:inline-block;
+         text-decoration:none;
+         font-family: "HelveticaNeueLTPro-Roman";
+         color:black;
+         padding:1vw;
+         font-size:1vw;
 
-
-        }
-        .img{
+         }
+         .sublink-wrapper a:hover{
+         color:grey;
+         cursor:pointer;
+         }
+         @media (max-width: 1100px) {
+         .navigation-container {
+         display:none;
+         }
+         .newsfeed-container{
+         display:none;
+         }
+         .header{
+         left: 0;
+         width: 100%;
+         }
+         .footer{
+         left: 0;
+         width: 100%;
+         }
+         .main-content-container{width:100%; left:0;}
+         }
+         @media (max-width: 1100px) {
+         .navigation-container {
+         display:none;
+         }
+         .newsfeed-container{
+         display:none;
+         }
+         .container {
+         width: 45%;
+         }
+         .header{
+         left: 0;
+         width: 100% !important;
+         }
+         .footer{
+         left: 0;
+         width: 100% !important;
+         }
+         .main-content-container{ width: 100% !important; left:0;}
+         }
+         @media (max-width:500px){
+         .main-content-container{
+         flex-direction: column;
+         }
+         .sublink-wrapper{
+         width: 60% !important;
+         }
+         
+         .container {
+         width: 300px !important;
+         }
+         }
+         @media (min-width: 1200px){
+         .container {
+         width: 45%;
+         }
+         }
+         @media (min-width: 992px){
+         .container {
+         /* width: 970px; */
+         width: 45%;
+         }
+         }
+         ::-webkit-scrollbar {
+         display: none;
+         }
+          .sublink-wrapper span{
+           border-bottom:1px solid black !important;
+         }
       
-      border:1px solid black;
-
-
-     flex: 1;
-        }
-
-       @media (max-width:500px){
-        .main-content-container{
-          flex-direction: column;
-
-        }
-       }
-       @media (max-height:1000px){
-        .main-content-container{
         
-        }
-       }
+      </style>
+      <title>The Botelho Lab</title>
+   </head>
+   <body>
+      <script>document.body.className += ' fade-out';</script>
+      <div class='navigation-container smooth-color'>
+         <div class='navigation'>
+            <a href='index6.html'>HOME</a>
+            <a>THE CREW</a>
+            <a>PROJECTS</a>
+            <a>PUBLICATION</a>
+            <a >MEDIA</a>
+            <a >FUNDING</a>
+            <span> BOTELHO LAB </span>
+         </div>
+      </div>
+      <div class='newsfeed-container smooth-color'>
+         <div class='calendar'>
+         </div>
+         <div class='announcements-from-lab'>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+               </ol>
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <div class='press'>
+                        <div class='para'>
+                           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class='press'>
+                        <div class='para'>
+                           <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Left and right controls -->
+               <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="right carousel-control" href="#myCarousel" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right"></span>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+         <div class='twitter'>
+            <a class="twitter-timeline" data-chrome="noscrollbar" data-width="100%" data-height="100%" data-theme="light" data-chrome="noborders" href="https://twitter.com/Botelho_Lab?ref_src=twsrc%5Etfw">Tweets by Botelho_Lab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script>
+               var options = {
+                   "url": "css/twitter.css"
+               };
+               CustomizeTwitterWidget(options);
+            </script>
+         </div>
+      </div>
+      <div class='header'>
+         <div class='sublink-wrapper'>
+           <!-- sublinks -->
+         </div>
         
+         <div class='heading' >
+            <h1> BOTELHO LAB </h1>
+            <h4> ORGANELLE LAB AT RYERSON </h4>
+         </div>
+      </div>
+      <div class='main-content-container'>
+         <div class=img></div>
+         <div class=img> </div>
+         <div class="container"  style=' display:none;  overflow:scroll !important;'>
+            <div class="row">
+               <div class="col-lg-8 col-md-10 mx-auto content" style='width:100%; margin-top:2.5%; font-size:1vw'>
+                  <!-- website content -->
+               </div>
+            </div>
+         </div>
+          
 
-	    </style>
-	<title>The Botelho Lab</title>
-</head>
-<body>
-	<div class='navigation-container smooth-color'>
-	
-	 <div class='navigation'>
-	    <a href="#" >HOME</a>
-        <a href="#" >THE CREW</a>
-        <a href="#" >PROJECTS</a>
-        <a href="#" >PUBLICATION</a>
-        <a href="#" >MEDIA</a>
-        <a href="#" >FUNDING</a>
-        <span> BOTELHO LAB </span>
-	 </div>
-	</div>
-	<div class='newsfeed-container smooth-color'>
-		<div class='calendar'>
-           
-
-			
-		</div>
-		<div class='announcements-from-lab'>
-
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-                              <!-- Indicators -->
-                              <ol class="carousel-indicators">
-                                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                 <li data-target="#myCarousel" data-slide-to="1"></li>
-                              </ol>
-                              <!-- Wrapper for slides -->
-
-                              <div class="carousel-inner">
-                              
-                                 <div class="item active">  
-                                    <div class='press'>
-                                       <div class='para'>
-                                          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="item">
-                                    <div class='press'>
-                                       <div class='para'>
-                                          <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <!-- Left and right controls -->
-                              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                              <span class="glyphicon glyphicon-chevron-left"></span>
-                              <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                              <span class="glyphicon glyphicon-chevron-right"></span>
-                              <span class="sr-only">Next</span>
-                              </a>
-                           </div>
+      </div>
+      <div class='footer'>
+      </div>
+      <script>
+         $(function() {
+            $('body').removeClass('fade-out');
+         });
+         $(function(){
+            var modal = {
+               contentData: {
+                  crew_content: 'this is a crew site',
+                  projects_content: 'this is research site',
+                  publication: 'this is a publication site',
+                  media: 'this is a media site',
+                  funding: 'this is a funding'
+               },
+               clickerArguments: {
+                  2: 'crew',
+                  3: 'projects',
+                  4: 'publication',
+                  5: 'media',
+                  6: 'funding'
+               },
+               sublinks:{
+                  crew_content: '<a> <span> HR </span> </a><a><span> PI </span></a><a> <span>CREW</span> </a>',
+                  projects_content: '<a><span> project 1 </span></a><a><span> project 2</span> </a><a><span> project 3 </span></a>',
+                  publication: '<a><span> 2011</span> </a><a><span> 2012 </span></a><a><span> 2013 </span></a>',
+                  media: '<a><span> 2011</span> </a><a><span> 2012 </span></a><a><span> 2013 </span></a>',
+                  funding: '<a> <span>NSERC </span></a><a><span> CHIR</span> </a><a><span> SURA</span> </a>'
+               }
 
 
-		</div>
-		<div class='twitter'>
 
-                        <a class="twitter-timeline" data-chrome="noscrollbar" data-width="100%" data-height="100%" data-theme="light" data-chrome="noborders" href="https://twitter.com/Botelho_Lab?ref_src=twsrc%5Etfw">Tweets by Botelho_Lab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        <script>
-                           var options = {
-                               "url": "css/twitter.css"
-                           };
-                           CustomizeTwitterWidget(options);
-                        </script>
+            };
+            var octopus = {
+               init: function(){
+                  view.init();
+               },
+               getArguments: function(){
+                  return modal.clickerArguments;
+               },
+               getContents: function(){
+                  return modal.contentData;
+               },
+               getSublinks: function(){
+                  return modal.sublinks;
+               }
 
-		</div>
-	</div>
-	<div class='header'>
-		<h1> BOTELHO LAB </h1>
-		<h4> ORGANELLE LAB AT RYERSON </h4>
-	</div>
-	<div class='main-content-container'>
-		<div class=img></div>
-		<div class=img> </div>
+             
 
 
-	</div>
-	<div class='footer'>
-	</div>
+            };
+            var view = {
+               init: function(){
+                  var arguments = octopus.getArguments();
+                   /*$('.navigation').find('a:nth-child(1)').on('click', function(){
+                         view.homePage();
+                    });*/
+                  for(var i = 2; i <= 6; i++){
+                     $('.navigation').find('a:nth-child('+i+')').on('click', (function(copiedOptions){
+                           return function(){
+                              view.closeHeader(copiedOptions);
+                           }
+                      })(arguments[i]));
+                  }
+               },
+               closeHeader: function(options){
+                     $('.sublink-wrapper').slideDown();
+                     $('.heading').fadeOut();
+                     $('.newsfeed-container').fadeOut();
+                                             
+                     $('.header, .main-content-container, .footer').animate({width: 85+'%'});
+                     $('.img').fadeOut();
+                     view.openProjects(options);
+               },
+                openProjects: function(options){
+                    var content = octopus.getContents();
+                    var sublinks = octopus.getSublinks();
+                    if (options == 'crew'){ //I LEFT OFF HERE
+                        $('.content').html('<p>' + content.crew_content + '</p>' );
+                        $('.sublink-wrapper').html(sublinks.crew_content);
+                        setInterval(function(){ $('.container').fadeIn(); }, 300);
+                        
+                     }
+                     else if (options == 'projects'){
+                        $('.content').html('<p>' + content.projects_content + '</p>' );
+                        $('.sublink-wrapper').html(sublinks.projects_content);
+                        setInterval(function(){ $('.container').fadeIn(); }, 300);
+                     }
+                     else if (options == 'publication'){
+                        $('.content').html('<p>' + content.publication + '</p>' );
+                        $('.sublink-wrapper').html(sublinks.publication);
+                        setInterval(function(){ $('.container').fadeIn(); }, 300);
+                     }
+                     else if (options == 'media'){
+                        $('.content').html('<p>' + content.media + '</p>' );
+                        $('.sublink-wrapper').html(sublinks.media);
+                        setInterval(function(){ $('.container').fadeIn(); }, 300);
+                     }
+                     else if (options == 'funding'){
+                        $('.content').html('<p>' + content.funding + '</p>' );
+                        $('.sublink-wrapper').html(sublinks.funding);
+                        setInterval(function(){ $('.container').fadeIn(); }, 300);
+                     }
+               }
 
-</body>
+
+
+            }
+            octopus.init();
+
+
+         });
+        
+        
+         
+      </script>
+   </body>
 </html>
