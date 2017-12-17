@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <head>
+   <head> 
       <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|BioRhyme" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,14 +11,16 @@
          font-family: "HelveticaNeueLTPro-Roman";
          src: url("fonts/HelveticaNeueLTPro-Roman.otf");
          }
-         html,body{
+         html{
          width:100%
          height:100%;
+
          }
          body{
          min-width:1000px;
          opacity: 1;
          transition: 1s opacity;
+         min-height:500px !important;
          }
          body.fade-out {
          opacity: 0;
@@ -72,6 +74,7 @@
          background-image: url(images/main.jpg); 
          background-repeat: no-repeat;
          background-size: cover;
+
          }
          .header h1{
          font-family: 'BioRhyme', serif;
@@ -197,6 +200,10 @@
          .navigation-container {
          display:none;
          }
+         .navbar-default{
+            display: block !important;
+
+         }
          .newsfeed-container{
          display:none;
          }
@@ -211,6 +218,12 @@
          .main-content-container{width:100%; left:0;}
          }
          @media (max-width: 1100px) {
+         .heading h1{
+           margin-top:5%;
+         }
+         .sublink-wrapper{
+            padding-top:2.5%;
+         }
          .navigation-container {
          display:none;
          }
@@ -230,6 +243,12 @@
          }
          .main-content-container{ width: 100% !important; left:0;}
          }
+         @media (max-width: 800px){
+            .sublink-wrapper{
+               padding-top:4%;
+            }
+         }
+
          @media (max-width:500px){
          .main-content-container{
          flex-direction: column;
@@ -241,6 +260,9 @@
          .container {
          width: 300px !important;
          }
+         .sublink-wrapper{
+               padding-top:7%;
+            }
          }
          @media (min-width: 1200px){
          .container {
@@ -253,22 +275,90 @@
          width: 45%;
          }
          }
+         /* top navbar */
+         @media (min-width: 300px){
+         .container-nav {
+             /* width: 970px; */
+             width: 100%;
+           }
+         }
+         @media (max-height:620px){
+           .heading h1{
+            margin-top:8%;
+            }
+         }
+         @media (max-height:420px){
+           .heading h1{
+            margin-top:10%;
+            }
+         }
+        
+         /* ended */
          ::-webkit-scrollbar {
          display: none;
          }
-          .sublink-wrapper span{
+          .sublink-wrapper span{ 
            border-bottom:1px solid black !important;
          }
-      
-        
+         .nav li a{
+            cursor: pointer;
+            color:white;
+         }
+         .navbar-default {
+            background: #434343; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#434343, black); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#434343, black);/* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#434343, black); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#434343, black);/* Standard syntax */
+            border-color: #000000;
+
+         }
+         .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #000000;
+}
+         .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+            background:none;
+            
+         }
+                  .navbar-default .navbar-toggle .icon-bar {
+             background-color: #fff;
+         }
+                  .navbar-default .navbar-toggle {
+             border-color: #000;
+         }  
       </style>
       <title>The Botelho Lab</title>
    </head>
    <body>
       <script>document.body.className += ' fade-out';</script>
+      <!-- top nav bar --> 
+      <nav class="navbar navbar-default navbar-fixed-top" style='display:none'>
+      <div class="container-nav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index6.html">HOME</a></li>
+            <li><a>THE CREW</a></li>
+            <li><a >PROJECTS</a></li>
+            <li><a>PUBLICATION</a></li>
+            <li><a >MEDIA</a></li>
+            <li><a >FUNDING</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
       <div class='navigation-container smooth-color'>
          <div class='navigation'>
-            <a href='index.html'>HOME</a>
+            <a href='index6.html'>HOME</a>
             <a>THE CREW</a>
             <a>PROJECTS</a>
             <a>PUBLICATION</a>
@@ -351,6 +441,7 @@
       <div class='footer'>
       </div>
       <script>
+         /* work on crew  */
          $(function() {
             $('body').removeClass('fade-out');
          });
@@ -405,7 +496,13 @@
                    /*$('.navigation').find('a:nth-child(1)').on('click', function(){
                          view.homePage();
                     });*/
+         
                   for(var i = 2; i <= 6; i++){
+                     $('.nav').find('li:nth-child('+i+')').on('click', (function(copiedOptions){
+                           return function(){
+                              view.closeHeader(copiedOptions);
+                           }
+                     })(arguments[i]));
                      $('.navigation').find('a:nth-child('+i+')').on('click', (function(copiedOptions){
                            return function(){
                               view.closeHeader(copiedOptions);
