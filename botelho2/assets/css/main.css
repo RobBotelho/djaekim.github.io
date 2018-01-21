@@ -2775,6 +2775,9 @@
   cursor: pointer;
   width: 100%;
 }
+.button:hover{
+	background-color: rgba(0, 116, 217, 0.67);
+}
 
 .card img{
          background-width:100%;
@@ -2952,4 +2955,24 @@ canvas{
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+.img-block{
+    width:100%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom:1%;
+    border-radius:50%;
+}
+.img-container{
+	 position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    background-color: #00000075;
+    top: 50%;
+    padding: 0% 3%;
+    left: 50%;
+    transform: translate(-50%, 450%);
 }
