@@ -23,6 +23,11 @@
       <![endif]-->
    </head>
    <body style='overflow-x:hidden'>
+   <div id='loading'>
+      <img src='images/loading/load.gif'>
+      <h2 style='text-align:center'> loading... </h2>
+   </div>
+   <div id='bodyholder'>
       <!-- Header -->
       <div id="header">
          <div class="top">
@@ -745,7 +750,10 @@
       <script >
          $(window).load(function() {
 // as soon as window is loaded we call the callback
-            $('body').fadeIn();
+            $('#loading').fadeOut();
+            setTimeout(function(){
+             $('#bodyholder').fadeIn();
+            }, 500);
          });
          
             function openCity(evt, cityName) {
@@ -1184,5 +1192,6 @@
       <script src="assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
+      </div>
    </body>
 </html>s
