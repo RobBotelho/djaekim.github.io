@@ -11,8 +11,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
       <script src="assets/js/customize-twitter-1.1.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
       <link rel="stylesheet" href="assets/css/main.css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+<!-- 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
       <!--[if lte IE 8]>
@@ -69,12 +78,15 @@
       <!-- Main -->
       <div id="main">
          <!-- Intro -->
-         <section id="top" class="one dark cover">
-            <div class="container">
-               <header class='typewriter'>
-                  <h2  style='letter-spacing:2px; display:none; color:white;background-color: #00000087;'class="alt">Welcome to the <strong>  Botelho </strong> Lab! </h2>
+
+         <section id="top"style='height:450px' class="one dark cover"> <!-- this is where the img went -->
+               <div class='fade'>
+               </div>
+              <div class="container">
+               <header class='header-1'>
+                  <h2  style='letter-spacing:2px; color:white;background-color: #00000087;'class="alt">Welcome to the <strong>  Botelho </strong> Lab! </h2>
                </header>
-            </div>
+            </div>  
          </section>
          <section id='top'>
             <div class="container">
@@ -83,12 +95,12 @@
                </p>
                <footer>
                <button id='big' style='border-radius: none !important; background-color: #28B9B5;' class='motive'>
-                  <h3 class='pulse' style='color:white'>  The Big Picture </h3>
+                  <h3 class='pulse' style='color:white'>  The <span style=' font-weight:900'> Big</span>  Picture </h3>
                </button>
                </footter>
                <div class='topic-content'>
                   <i class="fa fa-times" aria-hidden="true"></i>
-                  <h2> <strong> Laboratory on Organelle Identity and Function </strong> </h2>
+                  <h2 style='margin-bottom: 10%;'> <strong> Laboratory on Organelle Identity and Function </strong> </h2>
                   <p> We want to learn how cells build, maintain and change their organelles and what these structures do.
                      Why does this matter?  Organelles are the “organs” of the cell.  In a very broad sense, organelles
                      compartmentalize and organize myriad biochemical reactions that underpin cell survival and
@@ -458,10 +470,7 @@
                               <img src='images/individual/Janusan Baskararajah.JPG' alt="Dr. Botelho">
                            </div>
                            <div class="containers">
-                              <!--  <h2>Jane Doe</h2>
-                                 <p class="title">CEO & Founder</p>
-                                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                                 <p>example@example.com</p> -->
+                              
                               <p><button class="button" id='Janusan'><span class='border-bottom'> B.Sc. candidate 
                                  </span> <br> <span> Janusan Baskararasingh</button>
                               </p>
@@ -563,7 +572,7 @@
                               <img src='images/individual/Antonietta.png' alt="Antonietta">
                            </div>
                            <div class="containers">
-                              <p><button class="button" id='Antonietta'> <span class='border-bottom'> Ph.D. candidate at Dalhousie </span> <br> <span> Antonietta Pietrangelo </button></p>
+                              <p><button class="button" id='Antonietta'> <span class='border-bottom'> Ph.D. candidate </span> <br> <span> Antonietta Pietrangelo </button></p>
                            </div>
                         </div>
                      </div>
@@ -748,13 +757,51 @@
       <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
       <script >
+
          $(window).load(function() {
 // as soon as window is loaded we call the callback
             $('#loading').fadeOut();
-            setTimeout(function(){
+            setInterval(function(){
              $('#bodyholder, #headerToggle').fadeIn();
             }, 500);
          });
+// slider
+
+    setTimeout(function(){
+    // $('.header-1 h2').slideDown();
+        $(".header-1 h2").animate({marginTop: '0%'}, 1000);
+    },1000)
+
+  /*
+
+     
+   */
+//        
+      var url = ['images/2017/Group-Photo-2017.jpg', 'images/individual/Bacteria-fragmentation.png','images/a.png'];
+      var caption = ['Welcome to the Botelho Lab!', 'ome text that describes me lorem ipsum ipsum lorem','ome text that describes me lorem ipsum ipsum lorem'];
+      var index = 0;
+         setInterval(function(){
+            index = (++index)%3;
+            $('.header-1 h2').fadeOut(10);
+            if (index == 0){
+               $('.header-1 h2').css("font-size", "2em");
+               $(".header-1 h2").animate({marginLeft: '0%', marginTop:'0%'}, 500).fadeIn();
+            } else{
+               $('.header-1 h2').css("font-size", "0.8em");
+               $(".header-1 h2").animate({marginTop:'250px'}, 500).fadeIn();
+
+            }
+            
+            $('.fade ').fadeIn(400);
+            setTimeout(function(){
+               
+               $('.header-1 h2').text(caption[index]).fadeIn(10);
+               $('#main > section.one').css('background-image', 'url('+url[index]+')');
+               $('.fade').fadeOut(100);
+            },100);
+         }, 10000); 
+     
+   
          
             function openCity(evt, cityName) {
                 var i, tabcontent, tablinks;
@@ -772,7 +819,7 @@
             }
             
                 // header
-               $('.typewriter h2').fadeIn(6000);
+              // $('.typewriter h2').fadeIn(6000);
          
                   //fancy 
                   $('.tablinks').click(function(){
