@@ -24,6 +24,7 @@
 
 	body {
 		line-height: 1;
+		display:none;
 	}
 
 	ol, ul {
@@ -1680,6 +1681,7 @@
 
 	p, ul, ol, dl, table {
 		margin-bottom: 0em;
+		
 	}
 
 	br.clear {
@@ -2155,7 +2157,7 @@
 			margin: 0;
 			overflow: hidden;
 			padding: 2em 0;
-			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
+			    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 			text-align: center;
 			background-image: url("images/overlay.png");
 		}
@@ -2581,6 +2583,9 @@
 		color:white;
 
 	}
+	.fa-times{
+		margin-bottom:6%;
+	}
 	.active{
 		color:white;
 	}
@@ -2642,10 +2647,15 @@
 
 	}
 	.topic-content{
-		display:none;background-color: #80808014; padding: 6%;
+		display:none;
+		background-color: #80808014; padding: 6%;
 		margin-bottom:5%;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 
+	}
+	.topic-content p{
+		color:black;
 	}
 	.topic-img{
 		width: 250px;
@@ -2769,10 +2779,11 @@
   display: inline-block;
   padding: 2%;
   margin-bottom:5em;
-  color: white;
+  color: whsite;
   background-color: #0074D9;
   text-align: center;
   cursor: pointer;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   width: 100%;
 }
 .button:hover{
@@ -2790,7 +2801,7 @@
          }
          .individual img{
             width:90%;
-          
+          box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
             border-radius:50%;
             height:90%;
          }
@@ -2959,10 +2970,19 @@ canvas{
 .img-block{
     width:100%;
     margin: 0 auto;
+    max-height: 450px;
     display: block;
     margin-bottom:1%;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     border-radius:50%;
+     transition: 100ms;
+  transform: translateZ(0px);
+
 }
+.img-block:hover{
+	transform: translateZ(25px) rotate(3deg);
+}
+
 .img-container{
 	 position: relative;
     text-align: center;
