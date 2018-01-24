@@ -1619,7 +1619,7 @@
      overflow: hidden;
      padding: 2em 0;
      text-align: center;
-     background-image: url("images/overlay.png");
+   
 }
  #main > section.dark {
      color: #ddd;
