@@ -1664,6 +1664,9 @@
         /*here*/
          height:600px;
     }
+    .fade{
+        height:600px;
+    }
  }
  @media screen and (min-width: 961px) and (max-width: 1880px) {
     /* Basic */
