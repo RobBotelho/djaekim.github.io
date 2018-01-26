@@ -10,20 +10,8 @@
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="assets/css/main.css" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <!-- 
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-         -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-      <!--[if lte IE 8]>
-      <link rel="stylesheet" href="assets/css/ie8.css" />
-      <![endif]-->
-      <!--[if lte IE 9]>
-      <link rel="stylesheet" href="assets/css/ie9.css" />
-      <![endif]-->
    </head>
    <body style='overflow-x:hidden'>
       <div id='loading'>
@@ -77,7 +65,7 @@
          <!-- Main -->
          <div id="main">
             <!-- Intro -->
-            <section id="top"style='height:450px' class="one dark cover">
+            <section id="top" class="one dark cover">
                <!-- this is where the img went -->
                <div class='fade'>
                </div>
@@ -760,14 +748,18 @@
                $('#loading').fadeOut(100);
                setInterval(function(){
                 $('#bodyholder, #headerToggle').fadeIn();
+               // var height_section = $( "section" ).first().height();
+             //   console.log(height_section);
+             //   $('.fade').css('height', height_section);
                }, 500);
             });
             // slider
             
-            setTimeout(function(){
+         /*   setTimeout(function(){
             // $('.header-1 h2').slideDown();
             $(".header-1 h2").animate({marginTop: '0%'}, 1000);
             },1000)
+            */
             
             /*  var url = ['images/2017/Group-Photo-2017.jpg', 'images/individual/Bacteria-fragmentation.png','images/a.png'];
             var caption = ['Welcome to the Botelho Lab!', 'ome text that describes me lorem ipsum ipsum lorem','ome text that describes me lorem ipsum ipsum lorem'];
@@ -832,7 +824,7 @@
                   $('#main > section.one').css('background-image', 'url('+url[index]+')');
                  
                },2000);
-            }, 9000); 
+            }, 5000); 
             
             
             // image slide - fadein and fadeout at the same time ... work in progress
