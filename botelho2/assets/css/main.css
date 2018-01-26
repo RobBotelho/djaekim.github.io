@@ -1647,6 +1647,8 @@
  #main > section.one {
     /*here*/
      background-image: url('../../images/2017/Group-Photo-2017.jpg');
+     height:450px;
+     
 }
  #main > section.two {
      background-color: azure;
@@ -1657,6 +1659,12 @@
      background-color: #e8edec;
 }
 /* Wide */
+ @media screen and (min-width:1890px){
+     #main > section.one {
+        /*here*/
+         height:600px;
+    }
+ }
  @media screen and (min-width: 961px) and (max-width: 1880px) {
     /* Basic */
      body, input, textarea, select {
@@ -2334,7 +2342,7 @@
      display:none;
 }
  .header-1 h2{
-     margin-top: 100%;
+    
      font-size:2em;
 }
  .fade{
