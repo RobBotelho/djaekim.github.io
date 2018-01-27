@@ -1,5 +1,6 @@
 @import url("font-awesome.min.css");
  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+
 /* Reset */
  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
      margin: 0;
@@ -1618,6 +1619,7 @@
      overflow: hidden;
      padding: 2em 0;
      text-align: center;
+   
 }
  #main > section.dark {
      color: #ddd;
@@ -1646,6 +1648,7 @@
     /*here*/
      background-image: url('../../images/2017/Group-Photo-2017.jpg');
      height:450px;
+     
 }
  #main > section.two {
      background-color: azure;
@@ -1657,14 +1660,14 @@
 }
 /* Wide */
  @media screen and (min-width:1890px){
-     #main > section.one {
+      #main > section.one {
         /*here*/
          height:600px;
     }
-     .fade{
-         height:600px !important;
+    .fade{
+        height:600px !important;
     }
-}
+ }
  @media screen and (min-width: 961px) and (max-width: 1880px) {
     /* Basic */
      body, input, textarea, select {
@@ -1964,8 +1967,7 @@
      color:black;
      border: 1px solid #80808042;
      background-color: #28B9B5;
-    /* margin-bottom:1.5%;
-     */
+  /*   margin-bottom:1.5%; */
      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -2024,7 +2026,7 @@
      margin-top: 2.5%;
      border-radius: 5px;
     /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-     */
+    */
 }
  .bold{
      color:black;
@@ -2072,8 +2074,7 @@
      */
      border: 1px solid #80808042;
      background-color: #28b9b5;
-    /* margin-bottom:5%;
-     */
+   /*   margin-bottom:5%; */
      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -2093,12 +2094,10 @@
      cursor:pointer;
 }
  .column {
-     width: 33.3%;
-    /* height: 30vh;
-     */
-    /* padding-top: 33.3%;
-     */
-     padding: 0 8px;
+    width: 33.3%;
+    /* height: 30vh; */
+    /* padding-top: 33.3%; */
+    padding: 0 8px;
 }
 /* important img */
  @media (max-width: 650px) {
@@ -2142,147 +2141,234 @@
 }
  .card img{
      background-width:100%;
-     border-radius: 50%;
+         border-radius: 50%;
      background-height:100%;
-     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
      width:100%;
 }
  .individual{
+     
+    width: 100%;
+
+ 
+    height: 0;
+
+    padding-bottom: 100%;
+}
+}
+ .individual img{
+    width: 100%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+ .row {
+     margin:0 auto;
+}
+ ::-webkit-scrollbar {
+     display: none;
+}
+ .portfolio{
+     display:none;
      width: 100%;
-     height: 0;
-     padding-bottom: 100%;
-}undefined}undefined .individual img{
- width: 100%;
- box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);undefined}undefined .row {
- margin:0 auto;undefined}undefined ::-webkit-scrollbar {
- display: none;undefined}undefined .portfolio{
- display:none;
- width: 100%;
- height: 100%;
- z-index: 999;
-/* margin: 0 auto;
- */
- left:0;
- position: fixed;
- bottom: 0;
- background-color: white;undefined}undefined .portfolio-content-wrapper{
- position: absolute;
- height: 100%;
- width: 100%;undefined}undefined .portfolio-content{
- width: 80%;
- height: 100%;
- background-color:white;
- margin: 0 auto;
- overflow-y: scroll;
- overflow-x: hidden;
- padding-bottom:10%;undefined}undefined .topic-media{
- width: 100%;
-/* height: 50px;
- */
- border: 1px solid #80808042;
- background-color: #aed9ff;
- border-radius:0.35em;
- margin-bottom:5%;
- box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);undefined}undefined .portfolio-content img{
- width: 30%;
- padding: 2%;
- margin-top: 2%;
- margin-bottom:5%;
- border-radius: 50%;undefined}undefined .portfolio-content p{
- font-size: 0.88em;
- margin-bottom: 2.5em;undefined}undefined header h2{
- letter-spacing:1px;undefined}undefined #publication .container h3{
- font-size: 1.3em;undefined}undefined #publication .container p {
- font-size:0.6em;
- margin-bottom:1.2em;undefined}undefined .tab {
- overflow: hidden;
- border: 1px solid #ccc;
- background-color: #222629;
- box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
- transition: all 0.3s cubic-bezier(.25,.8,.25,1);
- border-radius:5px;undefined}undefined .tab:hover{
- box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);undefined}undefined/* Style the buttons inside the tab */undefined .tab button {
- background-color: inherit;
- float: left;
- border: none;
- outline: none;
- cursor: pointer;
- letter-spacing: 2px;
- padding: 17px 25px;
- transition: 0.3s;
- font-size: 17px;
- font-family: 'Source Sans Pro', sans-serif;undefined}undefined/* Change background color of buttons on hover */undefined .tab button:hover {
- background-color: #72747663;
- letter-spacing:2px;undefined}undefined/* Create an active/current tablink class */undefined .tab button.active {
- background-color: #3f464a;undefined}undefined/* Style the tab content */undefined .tabcontent {
- display: none;
- padding: 6px 12px;
- border-top: none;undefined}undefined .tabcontent a img{
- width: 45%;
- box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
- transition: all 0.3s cubic-bezier(.25,.8,.25,1);
- background-color:#9b9ba11a;undefined}undefined .tabcontent a{
- border-bottom: none !important;undefined}undefined .tabcontent a img:hover{
- box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);undefined}undefined canvas{
- z-index:-1;
- position:absolute;
- width:100%;
- height:100%;undefined}undefined .typewriter h2 {
- overflow: hidden;
-/* Ensures the content is not revealed until the animation */
- white-space: nowrap;
-/* Keeps the content on a single line */
- margin: 0 auto;
-/* Gives that scrolling effect as the typing happens */
- letter-spacing: .15em;
-/* Adjust as needed */
- animation: typing 2.5s steps(40, end) undefined}undefined/* The typing effect */undefined @keyframes typing {
- from {
-     width: 0 
+     height: 100%;
+     z-index: 999;
+    /* margin: 0 auto;
+     */
+     left:0;
+     position: fixed;
+     bottom: 0;
+     background-color: white;
 }
- to {
-     width: 100% 
-}undefined}undefined/* The typewriter cursor effect */undefined @keyframes blink-caret {
- from, to {
-     border-color: transparent 
+ .portfolio-content-wrapper{
+     position: absolute;
+     height: 100%;
+     width: 100%;
 }
- 50% {
-     border-color: orange;
-}undefined}undefined .img-block{
- width:100%;
- margin: 0 auto;
- display: block;
- margin-bottom:1%;
- box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
- transition: 100ms;
- transform: translateZ(0px);undefined}undefined .img-block:hover{
- transform: translateZ(25px) rotate(3deg);undefined}undefined .img-container{
- position: relative;
- text-align: center;
- color: white;undefined}undefined .centered {
- position: absolute;
- background-color: #00000075;
- top: 50%;
- padding: 0% 3%;
- left: 50%;
- transform: translate(-50%, 50%);undefined}undefined #loading img{
- margin: 0 auto;
- margin-top: 10%;
- display: block;undefined}undefined #loading {
- width:100%;
- height:100%;undefined}undefined #headerToggle{
- display:none;undefined}undefined .header-1 h2{
- font-size:2em;undefined}undefined .fade{
- width: 100%;
- height: 450px;
- position: absolute;
- display:none;
- top: 0;
- background-size:cover;
- background-repeat:no-repeat;
- background-color: black;undefined}undefined #header1, #header2{
- position:absolute;
- bottom:0;
- left:10%;
- width:80%;
- text-align:left;undefined}undefined 
+ .portfolio-content{
+     width: 80%;
+     height: 100%;
+     background-color:white;
+     margin: 0 auto;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     padding-bottom:10%;
+}
+ .topic-media{
+     width: 100%;
+    /* height: 50px;
+     */
+     border: 1px solid #80808042;
+     background-color: #aed9ff;
+     border-radius:0.35em;
+     margin-bottom:5%;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+ .portfolio-content img{
+     width: 30%;
+     padding: 2%;
+     margin-top: 2%;
+   
+     margin-bottom:5%;
+     border-radius: 50%;
+}
+ .portfolio-content p{
+     font-size: 0.88em;
+     margin-bottom: 2.5em;
+}
+ header h2{
+     letter-spacing:1px;
+}
+ #publication .container h3{
+     font-size: 1.3em;
+}
+ #publication .container p {
+     font-size:0.6em;
+     margin-bottom:1.2em;
+}
+ .tab {
+     overflow: hidden;
+     border: 1px solid #ccc;
+     background-color: #222629;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+     border-radius:5px;
+}
+ .tab:hover{
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+/* Style the buttons inside the tab */
+ .tab button {
+     background-color: inherit;
+     float: left;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     letter-spacing: 2px;
+     padding: 17px 25px;
+     transition: 0.3s;
+     font-size: 17px;
+     font-family: 'Source Sans Pro', sans-serif;
+}
+/* Change background color of buttons on hover */
+ .tab button:hover {
+     background-color: #72747663;
+     letter-spacing:2px;
+}
+/* Create an active/current tablink class */
+ .tab button.active {
+     background-color: #3f464a;
+}
+/* Style the tab content */
+ .tabcontent {
+     display: none;
+     padding: 6px 12px;
+     border-top: none;
+}
+ .tabcontent a img{
+     width: 45%;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+     background-color:#9b9ba11a;
+
+}
+ .tabcontent a{
+     border-bottom: none !important;
+}
+ .tabcontent a img:hover{
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+ canvas{
+     z-index:-1;
+     position:absolute;
+     width:100%;
+     height:100%;
+}
+ .typewriter h2 {
+     overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+     white-space: nowrap;
+    /* Keeps the content on a single line */
+     margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+     letter-spacing: .15em;
+    /* Adjust as needed */
+     animation: typing 2.5s steps(40, end) 
+}
+/* The typing effect */
+ @keyframes typing {
+     from {
+         width: 0 
+    }
+     to {
+         width: 100% 
+    }
+}
+/* The typewriter cursor effect */
+ @keyframes blink-caret {
+     from, to {
+         border-color: transparent 
+    }
+     50% {
+         border-color: orange;
+    }
+}
+ .img-block{
+     width:100%;
+     margin: 0 auto;
+     
+     display: block;
+     margin-bottom:1%;
+     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    
+     transition: 100ms;
+     transform: translateZ(0px);
+}
+ .img-block:hover{
+     transform: translateZ(25px) rotate(3deg);
+}
+ .img-container{
+     position: relative;
+     text-align: center;
+     color: white;
+}
+ .centered {
+     position: absolute;
+     background-color: #00000075;
+     top: 50%;
+     padding: 0% 3%;
+     left: 50%;
+     transform: translate(-50%, 50%);
+}
+ #loading img{
+     margin: 0 auto;
+     margin-top: 10%;
+     display: block;
+}
+ #loading {
+     width:100%;
+     height:100%;
+}
+ #headerToggle{
+     display:none;
+}
+ .header-1 h2{
+    
+     font-size:2em;
+}
+ .fade{
+     width: 100%;
+     height: 450px;
+     position: absolute;
+     display:none;
+     top: 0;
+     background-size:cover;
+     background-repeat:no-repeat;
+     background-color: black;
+}
+#header1, #header2{
+   position:absolute;
+    bottom:0;
+    left:10%;
+    width:80%;
+    text-align:left;
+}
