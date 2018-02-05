@@ -4,6 +4,7 @@
       <title>The Botelho Lab </title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
       <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
       <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
       <script src="assets/js/customize-twitter-1.1.js" type="text/javascript"></script>
@@ -11,19 +12,26 @@
       <link rel="stylesheet" href="assets/css/main.css" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
    </head>
+
    <body style='overflow-x:hidden'>
       <div id='loading'>
          <img src='images/loading/load.gif'>
       </div>
       <div id='bodyholder'>
+          <nav class='optionsMenu'>
+                  <input type='hidden'>
+                  <h3 style='color:white'>  </h3>
+          </nav>
          <!-- Header -->
          <div id="header">
             <div class="top">
                <!-- Logo -->
+
                <div id="logo">
-                  <span class="image avatar48"><img src="images/avatar.png" alt="" /></span>
+                  <span class="image avatar48"><img src="ryerson.png" alt="" /></span>
                   <h1 id="title">Botelho Lab</h1>
                   <p>Studying organelle <br> identity and function</p>
                </div>
@@ -32,9 +40,9 @@
                   <ul>
                      <li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
                      <li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-flask">Research</span></a></li>
-                     <li><a href="#publication" id="publication-link" class="skel-layers-ignoreHref"><span class="icon fa-file-text">Publication</span></a></li>
-                     <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-users">Crew</span></a></li>
-                     <li><a href="#media" id="media-link" class="skel-layers-ignoreHref"><span class="icon fa-play">Media & Results </span></a></li>
+                     <li><a href="#publication" id="publication-link" class="skel-layers-ignoreHref"><span class="icon fa-file-text" >Publication</span></a></li>
+                     <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-users"  onmouseover="showOptionsMenu(this, 'Meet our 2018 Crew!')">Crew</span></a></li>
+                     <li><a href="#media" id="media-link" class="skel-layers-ignoreHref"><span class="icon fa-play"  onmouseover="showOptionsMenu(this, 'Check out our Data!')">Media & Results </span></a></li>
                   </ul>
                   <div class='twitter'>
                      <a class="twitter-timeline" data-height="350" data-chrome="noscrollbar nofooter noborders" data-theme="dark" data-link-color="#FAB81E" href="https://twitter.com/Botelho_Lab?ref_src=twsrc%5Etfw">Tweets by Botelho_Lab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -43,8 +51,10 @@
             </div>
             <div class="bottom">
                <ul class="icons">
-                  <li><a style='margin:0' href="mailto:rbotelho@ryerson.ca" class="icon fa-envelope"><span class="label">Email</span></a></li>
-                  <span><a  href="mailto:rbotelho@ryerson.ca">  Contact! </a></span>
+                  <li><a style='color:white' href="mailto:rbotelho@ryerson.ca"  onmouseover="showOptionsMenu(this, 'Email Me')" class="icon fa-envelope" 
+                     ><span class="label" >Email</span></a></li>
+                  <li><a target='_blank' onmouseover="showOptionsMenu(this, 'How to get to Ryerson')" style='color:white; font-size:20px;' href="https://www.google.ca/maps/place/Podium,+350+Victoria+St,+Toronto,+ON+M5B+2K3/@43.6582902,-79.3812141,259m/data=!3m2!1e3!5s0x882b34caadd1f035:0xaedd8fa23dac26e6!4m5!3m4!1s0x882b34caa90ddf77:0xdbf44fbeaec35a4!8m2!3d43.6582986!4d-79.3807846" class="fa fa-subway"><span class="label"></span></a></li>
+                 
                </ul>
             </div>
          </div>
@@ -53,15 +63,28 @@
             <!-- Intro -->
             <section id="top" style='position:relative' class="one dark cover">
                <!-- this is where the img went -->
-               <div class='fade'>
-               </div>
+              <div class='overlay'>
+              </div>
+              <div class='fade'>
+               </div> 
                <div class="container">
-                  <header id='header0' class='header-1'>
-                     <h2  style='letter-spacing:2px; font-size:3em; color:white;font-weight:900;background-color:#0000005c'>Welcome to the  Botelho Lab! </h2>
+                  <header id='header0' class='mainHeader'>
+                     <h2 id='header-1' style='letter-spacing:2px; font-size:3em; color:azure;z-index:99;font-weight:900; background-color:#0000003d'>Welcome to the  Botelho Lab! </h2>
+                     <h5 class='otherSlides' id='header-2'> Slide 2 is here </h5>
+                     <h5 class='otherSlides' id='header-3'> Slide 3 is here </h5>
                   </header>
+                  
+              
+
+
+                   <div class='slide' style='color:white'>
+                     <a id='circleOne'> <i class="fa fa-circle"></i> </a>
+                     <a id='circleTwo'><i class="fa fa-circle-o"  ></i></a>
+                     <a id='circleThree'><i class="fa fa-circle-o"></i></a>
+                  </div>
                </div>
-               <h2 id='header1' style='font-size:0.8em; display:none; letter-spacing:2px; color:white;background-color: #00000087;'class="alt"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,  </h2>
-               <h2  id='header2' style=' font-size:0.8em; display:none; letter-spacing:2px; color:white;background-color: #00000087;'class="alt"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,  </h2>
+                <!-- <h2 id='header1' style='font-size:0.8em; display:none; letter-spacing:2px; color:white;background-color: #00000087;'class="alt"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,  </h2>
+               <h2  id='header2' style=' font-size:0.8em; display:none; letter-spacing:2px; color:white;background-color: #00000087;'class="alt"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,  </h2>  -->
             </section>
             <section id='top'>
                <div class="container">
@@ -73,7 +96,7 @@
                      <h3 class='pulse' style='color:black'>  The <span style=' font-weight:900'> Big</span>  Picture </h3>
                   </button>
                   </footter>
-                  <div class='topic-content' style="background-color:#bbb8b814">
+                  <div class='topic-content' style="background-color:#f9f9f9">
                      
                      <h2 style='margin-bottom: 10%; color:black'> <strong> Laboratory on Organelle Identity and Function </strong> </h2>
                      <p> We want to learn how cells build, maintain and change their organelles and what these structures do.
@@ -806,7 +829,7 @@
             <!-- Contact -->
             <section id="media" class="five" style='background-color:white'/>
                <div class="container">
-                  <header>
+                  <header >
                      <h2 style='color:black'>MEDIA & RESULTS </h2>
                   </header>
                   <div class="tab">
@@ -839,8 +862,9 @@
 
          </script>
          <script src="assets/js/jquery.min.js"></script>
+         <script src='js/HiddenInfo.js'> </script>
          <script src='js/loader.js'> </script>
-         <script src='js/slideShow.js'></script>
+         <script src='js/slideShow.js'></script>  
          <script src='js/portfolio.js'> </script>
          <script src='js/imageTab.js'></script>
          <script src='js/responsive.js'></script>
