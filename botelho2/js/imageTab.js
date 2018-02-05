@@ -1,23 +1,24 @@
- function openCity(evt, cityName) {
-                   var i, tabcontent, tablinks;
-                   tabcontent = document.getElementsByClassName("tabcontent");
-                   for (i = 0; i < tabcontent.length; i++) {
-                       tabcontent[i].style.display = "none";
-                   }
-                   tablinks = document.getElementsByClassName("tablinks");
-                   for (i = 0; i < tablinks.length; i++) {
-                       tablinks[i].className = tablinks[i].className.replace(" active", "");
-                   }
-                   $('#'+cityName).fadeIn();
-                   
-  
-               }
-               
-                  
-                     $('.tablinks').click(function(){
-                        var reference = $(this);
-                        $('html,body').animate({
-                         scrollTop: reference.offset().top},
-                       500);
-                     });
-                
+          function openCity(evt, cityName) {
+              $('.tabcontent').not('#' + cityName).each(function(){
+                $(this).fadeOut();
+              })
+              
+              if (!($('#' + cityName)).is(':visible')) {
+                    
+                   $('#' + cityName).fadeIn();
+              } else {
+                $('#' + cityName).fadeOut();
+              }
+            
+             
+             
+          }
+
+
+          $('.tablinks').click(function() {
+              var reference = $(this);
+              $('html,body').animate({
+                      scrollTop: reference.offset().top
+                  },
+                  500);
+          });
