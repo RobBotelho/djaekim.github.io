@@ -2482,3 +2482,6 @@ margin-right:auto;
     background-color: #212529;
     opacity: 0.5;
 }
+.history img {
+    width:100%;
+}
